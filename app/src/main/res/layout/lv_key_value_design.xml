@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/lv_key_value_design_tx_key"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Key"
+        android:padding="8dp"
+        android:layout_weight="1.0"/>
+
+    <TextView
+        android:id="@+id/lv_key_value_design_tx_val"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Value"
+        android:padding="8dp"
+        android:layout_weight="1.0"
+        android:textAlignment="textEnd"
+        android:textStyle="bold"/>
+
+
+</LinearLayout>

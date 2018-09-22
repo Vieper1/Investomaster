@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListPreference
+        android:key="pref_refresh_time"
+        android:title="Refresh Time"
+        android:summary="Select the refresh interval"
+        android:entries="@array/interval_list"
+        android:entryValues="@array/interval_value_list"
+        android:defaultValue="10000"/>
+</PreferenceScreen>

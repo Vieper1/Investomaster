@@ -1,0 +1,67 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.avn.stocks.History"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="FROM"
+                android:layout_weight="1.0"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+
+            <DatePicker
+                android:id="@+id/frag_history_dt_from"
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="TO"
+                android:layout_weight="1.0"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+
+            <DatePicker
+                android:id="@+id/frag_history_dt_to"
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/frag_history_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+
+</LinearLayout>

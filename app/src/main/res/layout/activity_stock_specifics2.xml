@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.avn.stocks.StockSpecifics2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.6"
+            android:layout_marginBottom="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.jjoe64.graphview.GraphView
+                    android:layout_weight="0.10"
+                    android:id="@+id/stock_graph"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:layout_weight="1.0"
+                    android:layout_marginTop="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textAlignment="center"
+                    android:text="Pinch to zoom"/>
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/activity_horizontal_margin"
+                    android:background="@color/colorAccent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/lv_min_stock"
+                        android:visibility="invisible"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center_vertical|left"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Min"
+                            android:textColor="@android:color/white"/>
+                        <TextView
+                            android:id="@+id/txt_min_stock"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="N/A"
+                            android:textColor="@android:color/white"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="0.6">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="$ "
+                                android:textSize="34dp"
+                                android:textColor="@android:color/white"
+                                android:gravity="center"/>
+
+                            <TextView
+                                android:id="@+id/stock_current"
+                                android:gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="00.00"
+                                android:textSize="34dp"
+                                android:textColor="@android:color/white"/>
+
+                        </LinearLayout>
+
+
+
+                        <TextView
+                            android:id="@+id/stock_change"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="+0.00 +0.00%"
+                            android:textColor="@android:color/white"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lv_max_stock"
+                        android:visibility="invisible"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="right|center_vertical"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Max"
+                            android:textColor="@android:color/white"/>
+                        <TextView
+                            android:id="@+id/txt_max_stock"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="N/A"
+                            android:textColor="@android:color/white"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:layout_weight="1">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="Open"
+                                    android:gravity="center"
+                                    android:layout_weight="1"
+                                    android:textAlignment="textStart"
+                                    android:paddingStart="8dp"
+                                    android:paddingEnd="8dp" />
+
+                                <TextView
+                                    android:id="@+id/stock_open"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="00.0"
+                                    android:textAlignment="textEnd"
+                                    android:paddingStart="8dp"
+                                    android:paddingEnd="8dp" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:layout_weight="1">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="High"
+                                    android:gravity="center"
+                                    android:layout_weight="1"
+                                    android:textAlignment="textStart"
+                                    android:paddingStart="8dp"
+                                    android:paddingEnd="8dp" />
+                                <TextView
+                                    android:id="@+id/stock_high"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="00.0"
+                                    android:textAlignment="textEnd"
+                                    android:paddingStart="8dp"
+                                    android:paddingEnd="8dp" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:layout_weight="1">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="Low"
+                                    android:gravity="center"
+                                    android:layout_weight="1"
+                                    android:textAlignment="textStart"
+                                    android:paddingStart="8dp"
+                                    android:paddingEnd="8dp" />
+                                <TextView
+                                    android:id="@+id/stock_low"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="00.0"
+                                    android:textAlignment="textEnd"
+                                    android:paddingStart="8dp"
+                                    android:paddingEnd="8dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:layout_weight="1">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="Market Cap"
+                                    android:gravity="center"
+                                    android:layout_weight="1"
+                                    android:textAlignment="textStart"
+                                    android:paddingStart="8dp"
+                                    android:paddingEnd="8dp" />
+                                <TextView
+                                    android:id="@+id/stock_mkt_cap"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="00.0"
+                                    android:textAlignment="textEnd"
+                                    android:paddingStart="8dp"
+                                    android:paddingEnd="8dp" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:layout_weight="1">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="P/E Ratio"
+                                    android:gravity="center"
+                                    android:layout_weight="1"
+                                    android:textAlignment="textStart"
+                                    android:paddingStart="8dp"
+                                    android:paddingEnd="8dp" />
+                                <TextView
+                                    android:id="@+id/stock_pe_ratio"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="00.0"
+                                    android:textAlignment="textEnd"
+                                    android:paddingStart="8dp"
+                                    android:paddingEnd="8dp" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:layout_weight="1">
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_weight="1">
+
+                        <Button
+                            android:text="Set Date for graph"
+                            android:layout_width="wrap_content"
+                            android:background="#7986CB"
+                            android:textColor="@android:color/white"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/btn_past_select"
+                            android:padding="8dp"
+                            android:onClick="onSetCustomDateListener"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/stock_specifics2_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
+        android:src="@drawable/svg_favorite_border_white_48px"
+        android:layout_gravity="right|bottom"
+        app:elevation="4dp"/>
+</FrameLayout>
